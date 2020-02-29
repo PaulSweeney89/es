@@ -31,6 +31,13 @@ with open(txt_file, "r") as reader:
 ```
 - Program automatically closes text file after contents of **with** statement is complete & program is finished.
 
+Example of input & output of Program:
+```
+python es.py
+please input text file directory /home/paul/Desktop/es/moby-dick.txt
+116960
+```
+
 References:
 
 [Project Gutenbery- Moby Dick Text File](https://www.gutenberg.org/files/2701/old/moby10b.txt)
