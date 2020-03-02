@@ -5,14 +5,16 @@
 *Week 7 Task*
 
 Program Overview:
-- Program prompts user to input a file directory for a text file.
+- Program takes the name or the file directory of the text file to be read as a command line argument.
 ```
-txt_file = input("please input text file directory ")
+import sys                                  
+file_name = sys.argv[1]
 ```
+- Note that sys.argv[0] the script name.
 - Program opens file in read mode & reads file.
 - **.read()** reads entire file. 
 ```
-with open(txt_file, "r") as reader:       
+with open(file_name, "r") as reader:       
     read_file = reader.read()
 ```
 - Initiate 'e' counter with e_count = 0.
@@ -33,8 +35,7 @@ with open(txt_file, "r") as reader:
 
 Example of input & output of Program:
 ```
-python es.py
-please input text file directory /home/paul/Desktop/es/moby-dick.txt
+python es.py moby-dick.txt
 116960
 ```
 
@@ -43,3 +44,5 @@ References:
 [Project Gutenbery- Moby Dick Text File](https://www.gutenberg.org/files/2701/old/moby10b.txt)
 
 [Real Python - Reading & Writing Files](https://realpython.com/read-write-files-python/)
+
+[Stack Overflow - Command Line Arguments](https://stackoverflow.com/questions/7439145/i-want-to-read-in-a-file-from-the-command-line-in-python/7439162)
