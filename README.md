@@ -10,7 +10,7 @@ Program Overview:
 import sys                                  
 file_name = sys.argv[1]
 ```
-- Note that sys.argv[0] the script name.
+- Note that sys.argv[0] is the script name.
 - Program opens file in read mode & reads file.
 - **.read()** reads entire file. 
 ```
