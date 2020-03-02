@@ -2,9 +2,9 @@
 # sample file directory: /home/paul/Desktop/es/moby-dick.txt
 
 import sys                                  # import sys module
+file_name = sys.argv[1]                     # input text file name assigned as a command line argument
 
 # use 'with' statement to open text file & automatically close file after statement is executed.
-file_name = sys.argv[1]                     # input text file name assigned as a command line argument
 with open(file_name, "r") as reader:        # open file in read mode 'r'. 
     read_file = reader.read()              # read file
     
