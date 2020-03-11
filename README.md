@@ -33,7 +33,7 @@ with open(file_name, "r") as reader:
 ```
 - Alternative to using the above **for** loop to count for 'e'. Python has a in-built count function. (Feedback from Andrew 11.03.20)
 ```
-print(read_file.count("e")
+print(read_file.count("e"))
 ```
 - Program automatically closes text file after contents of **with** statement is complete & program is finished.
 
