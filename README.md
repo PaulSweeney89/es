@@ -12,22 +12,26 @@ file_name = sys.argv[1]
 ```
 - Note that sys.argv[0] is the script name.
 - Program opens file in read mode & reads file.
+- Incorporate open & read file code within a **try** block. 
 - **.read()** reads entire file. 
 ```
-with open(file_name, "r") as reader:       
-    read_file = reader.read()
+try:
+    with open(file_name, "r") as reader: 
+        read_file = reader.read()
 ```
 - Initiate 'e' counter with e_count = 0.
 - **for** loop through every character 'i' in the read file.
-- Using a **if** statement & the boolean expression i == "e" adding +1 to e_count when satisified.
+- Using a **if** statement & the boolean expression i == "e" adding +1 to e_count when satisified. 
+*(code removed and superceeded by using count function below)*
 ```
-    e_count = 0                             
+    e_count = 0 
     
-    for i in read_file:                    
+    for i in read_file: 
         if i == "e":                       
             e_count = e_count + 1
 ```
 - Program outputs value of e_count.
+*(code removed and superceeded by using count function below)*
 ```
     print(e_count)
 ```
@@ -36,6 +40,12 @@ with open(file_name, "r") as reader:
 print(read_file.count("e"))
 ```
 - Program automatically closes text file after contents of **with** statement is complete & program is finished.
+
+- **except** block to output file not found error, when command line input file does not exist or is incorrectly input. 
+```
+except FileNotFoundError:
+    print("File " + sys.argv[1] + " Not Found!")
+```
 
 Example of input & output of Program:
 ```
